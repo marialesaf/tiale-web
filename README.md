@@ -9,8 +9,8 @@ Sitio web de Tiale: catálogo de invitaciones digitales (bodas, XV años, baby s
 
 ## Publicar con GitHub Pages
 1. Sube estos archivos a un repositorio en GitHub.
-2. Settings → Pages → Branch: `main` / carpeta `/root` → Save.
-3. En 1–2 minutos tu sitio queda en `https://TU-USUARIO.github.io/NOMBRE-REPO/`.
+2. Settings → Pages → Source: Deploy from a branch → rama `main` / carpeta `/root` → Save.
+3. En 1–2 minutos el sitio queda en `https://TU-USUARIO.github.io/NOMBRE-REPO/`.
 
-## Pendiente
-- Reemplazar el número de WhatsApp de ejemplo (`573000000000`) por el real: está en el `<script>` al final del `index.html`, en la variable `WA_NUMBER`.
+## WhatsApp
+Número configurado: +57 300 904 3362 (variable `WA_NUMBER` en el `<script>` del `index.html`).
