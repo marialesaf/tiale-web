@@ -260,8 +260,13 @@
   .feat p{font-size:.9rem;color:#C7C4EC;}
 
   /* pricing */
-  .pg-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:900px;margin-inline:auto;}
-  @media(max-width:820px){ .pg-grid{grid-template-columns:1fr;} }
+  .pg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1120px;margin-inline:auto;align-items:start;}
+  @media(max-width:960px){ .pg-grid{grid-template-columns:1fr;max-width:480px;} }
+  .pcard .tagp{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--azul-deep);display:block;margin-bottom:7px;}
+  .pcard.hl .tagp{color:#fff;opacity:.9;}
+  .ppay{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;font-weight:600;color:var(--indigo);background:var(--tint-indigo);border-radius:100px;padding:8px 14px;align-self:flex-start;}
+  .pcard.hl .ppay{color:#fff;background:rgba(255,255,255,.18);}
+  .ppay svg{width:15px;height:15px;flex:none;}
   .pcard{border:1px solid var(--line);border-radius:26px;padding:38px 34px;display:flex;flex-direction:column;gap:22px;background:var(--card);box-shadow:var(--shadow-sm);position:relative;}
   .pcard.hl{background:var(--grad);color:#fff;border:none;box-shadow:var(--shadow-lg);}
   .pcard .badge{position:absolute;top:-13px;right:32px;background:#fff;color:var(--indigo);font-size:.76rem;font-weight:700;padding:6px 15px;border-radius:100px;box-shadow:var(--shadow-sm);}
@@ -490,34 +495,57 @@
   <section id="precios">
     <div class="wrap">
       <div class="shead center">
-        <span class="eyebrow center"><span class="dot"></span>Precios</span>
-        <h2 class="serif">Un solo pago por evento</h2>
-        <p>Sin suscripciones ni cuotas mensuales. Incluye invitados ilimitados y hosting mientras dure tu evento.</p>
+        <span class="eyebrow center"><span class="dot"></span>Paquetes</span>
+        <h2 class="serif">Elige el paquete ideal para tu evento</h2>
+        <p>Un solo pago por evento, sin suscripciones. En los 3 incluye: enlace propio, se ve perfecto en cualquier celular, se comparte por WhatsApp o QR, invitados ilimitados y hosting mientras dure tu evento.</p>
       </div>
       <div class="pg-grid">
         <div class="pcard">
-          <div><h3>Prediseñada</h3><p class="sub">Elige un modelo del catálogo y lo personalizamos con tus datos.</p></div>
-          <div class="price">$180.000 <span>COP · desde USD 45</span></div>
+          <div><span class="tagp">Plantilla</span><h3>Esencial</h3><p class="sub">Eliges un modelo del catálogo y lo personalizamos con tus datos.</p></div>
+          <div class="price">$200.000 <span>COP · USD 50</span></div>
+          <div class="ppay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M2 10h20"/></svg> Pago 100% al inicio</div>
           <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg> Plantilla del catálogo con su paleta</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg> Portada, cuándo y dónde, RSVP y mapa</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg> Cuenta regresiva y ubicación (Maps/Waze)</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg> Galería de hasta 8 fotos + 1 canción</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg> 1 ronda de cambios</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg> Entrega en 24–72 horas</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg> RSVP, música y mapa incluidos</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg> Invitados ilimitados</li>
           </ul>
-          <a class="btn btn-outline" data-wa data-msg="Quiero una invitación prediseñada 💌" href="#">Cotizar esta opción</a>
+          <a class="btn btn-outline" data-wa data-msg="Hola Tiale, me interesa el paquete Esencial 💌" href="#">Cotizar Esencial</a>
         </div>
         <div class="pcard hl">
           <span class="badge">La más pedida</span>
-          <div><h3>A tu medida</h3><p class="sub">Diseño 100% original, pensado desde cero para tu evento.</p></div>
-          <div class="price">$350.000 <span>COP · desde USD 90</span></div>
+          <div><span class="tagp">Personalizada</span><h3>Completa</h3><p class="sub">La plantilla adaptada por completo a tu temática, colores y estilo.</p></div>
+          <div class="price">$350.000 <span>COP · USD 88</span></div>
+          <div class="ppay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M2 10h20"/></svg> Pago 100% al inicio</div>
           <ul>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg> Diseño exclusivo desde cero</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg> 2 rondas de ajustes incluidas</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg> Todas las funciones + galería ilimitada</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg> Todo lo del paquete Esencial</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg> Nuestra historia, programa del día, padrinos y dress code</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg> Galería de hasta 25 fotos</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg> La canción que tú elijas</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg> Colores y tipografías a tu gusto</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg> 2 rondas de cambios · Entrega en 3–5 días</li>
           </ul>
-          <a class="btn btn-white" data-wa data-msg="Quiero una invitación a mi medida ✨" href="#">Cotizar esta opción</a>
+          <a class="btn btn-white" data-wa data-msg="Hola Tiale, me interesa el paquete Completa ✨" href="#">Cotizar Completa</a>
+        </div>
+        <div class="pcard">
+          <div><span class="tagp">A la medida</span><h3>Premium</h3><p class="sub">Diseño 100% original, creado desde cero para tu evento.</p></div>
+          <div class="price">$500.000 <span>COP · USD 125</span></div>
+          <div class="ppay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M2 10h20"/></svg> 50% al inicio · 50% al 75% aprobado</div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg> Todo lo del paquete Completa</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg> Diseño 100% original, desde cero</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg> Secciones ilimitadas y a la medida</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg> Galería ilimitada + animaciones</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg> Dominio personalizado opcional</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg> Rondas ampliadas hasta el 75% del diseño aprobado</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg> Asesoría 1:1 · Entrega en 7–10 días</li>
+          </ul>
+          <a class="btn btn-outline" data-wa data-msg="Hola Tiale, me interesa el paquete Premium 👑" href="#">Cotizar Premium</a>
         </div>
       </div>
-      <p class="pg-note">Precios de referencia para Colombia. Si estás en otro país, cotizamos en tu moneda local.</p>
+      <p class="pg-note">Precios de referencia para Colombia; si estás en otro país cotizamos en tu moneda local. La Completa y la Premium incluyen todo lo del paquete anterior.</p>
     </div>
   </section>
 
